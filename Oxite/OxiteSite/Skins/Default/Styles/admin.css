@@ -1,0 +1,411 @@
+﻿body.admin h2 {
+    background:url(images/admin.png) no-repeat;
+    padding-left:54px;
+    line-height:48px;
+    min-height:48px;
+}
+body.admin .posts h2,
+body.admin #post h2 {
+    background:none;
+    padding-left:inherit;
+}
+body.admin .posts h2,
+body.admin #post.editPage h2 {
+    line-height:inherit;
+    min-height:0;
+}
+
+/* DASHBOARD
+----------------------------------------------------------*/
+#dashboard ul#data,
+ul#pluginCategories,
+#dashboard ul#settings {
+    overflow:hidden;
+    width:100%;
+    margin:0;
+}
+#dashboard ul#data h3,
+ul#pluginCategories h3,
+#dashboard ul#data .more,
+#siteSettings h3,
+#dashboard ul#settings h3 {
+    padding:0 0 0 5px;
+}
+#dashboard ul#data ul,
+#dashboard ul#settings ul {
+    margin-left:0;
+}
+#dashboard ul#data li,
+ul#pluginCategories li,
+#dashboard ul#settings li {
+    list-style-type:none;
+    margin:0;
+}
+#dashboard ul#data h3,
+ul#pluginCategories h3,
+#siteSettings h3,
+#dashboard ul#settings h3 {
+    border-bottom:3px solid;
+}
+#dashboard ul#data .more {
+    text-align:right;
+}
+#dashboard ul#data li#recentPosts,
+#dashboard ul#data li#recentComments {
+    width:49%;
+}
+#dashboard ul#data li#recentPosts {
+    float:right;
+}
+#dashboard ul#data li#recentComments {
+    float:left;
+}
+#dashboard ul#data .more {
+    font-size:88%;
+    text-transform:lowercase;
+}
+#dashboard ul#settings li#manageSite,
+#dashboard ul#settings li#manageAreas,
+#dashboard ul#settings li#manageUsers {
+    width:32%;
+}
+#dashboard ul#settings li#manageSite,
+#dashboard ul#settings li#manageAreas {
+    float:left;
+    margin-right:2%;
+}
+#dashboard ul#settings li#manageUsers {
+    float:right;
+}
+#dashboard ul#settings li#manageSite li,
+#dashboard ul#settings li#manageAreas li,
+#dashboard ul#settings li#manageUsers li {
+    display:inline;
+    background:url(images/bullet_grey.png) no-repeat 1px 1px;
+    padding:0 0 0 17px;
+}
+
+ul#pluginCategories li.category {
+    float:left;
+    width:32%;
+    padding:0 .5%;
+}
+ul#pluginCategories li.category.m30 {
+    clear:left;
+}
+ul#pluginCategories ul.plugins {
+    margin-left:5px;
+}
+ul#pluginCategories ul.plugins li {
+    background:no-repeat 0 2px;
+    padding: 0 0 0 20px;
+}
+ul#pluginCategories ul.plugins li.disabled {
+    background-image:url(images/plugin_disabled.png);
+}
+ul#pluginCategories ul.plugins li.enabled {
+    background-image:url(images/plugin.png);
+}
+
+/* ENTRY EDIT
+----------------------------------------------------------*/
+body.dyn .post .title label,
+body.dyn .post .content label,
+body.dyn .post li.input.type label,
+body.dyn .post li.input.publish label {
+    display:none;
+}
+body.dyn .post li.input.publish label.radio {
+    display:inline;
+}
+.post label.radio {
+    background-color:#f0f0f0;
+    color:#426075;
+}
+.post .metadata.admin {
+    background-color:#f0f0f0;
+    color:#000;
+    margin-bottom:10px;
+    padding:5px 7px;
+}
+.post .metadata.admin label {
+    background-color:#f0f0f0;
+    color:#426075;
+}
+.post .metadata.admin .admin.buttons {
+    float:right;
+    margin:0;
+}
+.post .admin.buttons .button,
+.post .admin.buttons button {
+    margin:0 0 0 5px;
+}
+.post .admin.buttons input.submit {
+    width:12ex;
+    font-size:110%;
+}
+.post .admin.buttons input.submit,
+.post .admin.buttons button {
+    height:27px;
+}
+.post .admin.buttons button.cancel,
+body.dyn .post .admin.buttons a.cancel {
+    display:none;
+}
+body.dyn .post .admin.buttons button.cancel,
+.post .admin.buttons a.cancel {
+    display:inline;
+}
+.post .metadata.admin a:hover {
+    text-decoration:none;
+}
+.post .metadata.admin fieldset {
+    display:inline;
+    border:1px solid #9cadbf;
+    margin:0 0 -7px;
+    padding:0 5px 4px;
+}
+body.dyn .post .metadata.admin fieldset {
+    margin-bottom:-7px;
+    padding:1px 0 0;
+    border:none;
+}
+body.dyn .post .metadata.admin .publish fieldset {
+    margin-bottom:-6px;
+}
+.post .metadata.admin legend {
+    color:#9cadbf;
+    font-weight:bold;
+}
+body.dyn .post .metadata.admin legend,
+body.dyn .post .metadata.admin .tags label,
+body.dyn .post .metadata.admin .slug label {
+    display:none;
+}
+body.dyn .post .metadata.admin input.date {
+    background-color:#f0f0f0;
+    color:#9CADBF;
+    border:none;
+}
+body.dyn .post .metadata.admin input.date.active {
+    color:#42607f;
+}
+.post .metadata.admin ul {
+    float:left;
+    margin:2px 0 0;
+}
+.post .metadata.admin ul li {
+    list-style-type:none;
+    display:inline;
+    margin:0;
+}
+.post.addPage h2.title,
+.post.editPage h2.title {
+    margin-left:0;
+    overflow:inherit;
+}
+body.admin .post h2.title {
+    padding-left:0;
+}
+.post.addPost #post_title,
+.post.editPost #post_title {
+    width:99.1%;
+}
+.post.addPage #post_title,
+.post.editPage #post_title {
+    width:99.2%;
+    height:1.2em;
+}
+.post .single #post_tags {
+    width:110ex;
+}
+.post .multi #post_tags {
+    width:60ex;
+}
+.post.editPost #post_tags,
+.post.editPage #post_tags {
+   margin:0 0 0 2ex;
+}
+.post.editPost #post_tags,
+.post.editPage #post_tags {
+    width:57ex;
+}
+.post.editPost #post_area,
+.post.editPage #post_parent {
+    width:42ex;
+}
+.post.addPage #post_slug,
+.post.editPage #post_slug {
+    width:62ex;
+}
+.post.addPost #post_slug,
+.post.editPost #post_slug {
+    width:50ex;
+}
+.post #post_published {
+    width:22ex;
+}
+.post .content {
+    overflow:inherit;
+}
+body.dyn .post  li.input.slug {
+    margin:0 4ex 0 0;
+}
+body.dyn .post  li.input.draft {
+    margin:0 2ex 0 0;
+}
+body.dyn .post  li.input.allowComments {
+    margin:0 0 0 4ex;
+}
+body.dyn .post.editPost .input.page {
+    display:none;
+}
+body.dyn .post.editPage .input.area {
+    display:none;
+}
+.post #post_body,
+.post #post_bodyShort,
+.post #page_body {
+    width:99.3%;
+    margin:0 0 5px;
+}
+.post #post_body {
+    height:35em;
+}
+.post #post_bodyShort {
+    height:10em;
+}
+.post #post_body {
+    height:45em;
+}
+.post.editPage #post_bodyShort {
+    display:none;
+}
+
+/* FORM
+----------------------------------------------------------*/
+form div {
+    margin:0 0 1em 5px;
+}
+form div.buttons {
+    margin:1em 0 0 5px;
+}
+form label {
+    display:block;
+}
+.post form label {
+    display:inline;
+}
+form label.checkbox {
+    display:inline;
+}
+form .hint {
+    font-size:88%;
+    font-style:italic;
+    display:block;
+}
+form.plugin input.text {
+    width:24ex;
+}
+form .buttons button.cancel,
+body.dyn form .buttons a.cancel {
+    display:none;
+}
+body.dyn form .buttons button.cancel,
+form .buttons a.cancel {
+    display:inline;
+}
+form input.button,
+form button {
+    height:26px;
+}
+form input.button.submit {
+    font-weight:bold;
+}
+
+/* SITE SETTINGS
+----------------------------------------------------------*/
+body.dyn form#siteSettings span.hint.icons {
+    display:inline;
+}
+body.dyn form#siteSettings span.hint.icons img {
+    cursor:pointer;
+    border:1px solid;
+    vertical-align:-.5em;
+    padding:1px;
+}
+body.dyn form#siteSettings span.hint.icons span {
+    display:none;
+}
+form#siteSettings button.cancel {
+    margin:0 0 0 5px;
+}
+
+/* AREA MANAGER
+----------------------------------------------------------*/
+form#area {
+    margin:1.6em 0;
+}
+form#area .add,
+form#area .find,
+form#area .buttons {
+    padding-left:20px;
+}
+form#area .add {
+    background:url(images/add.png) no-repeat 0 50%;
+}
+form#area .find {
+    margin-top:1.8em;
+    background:url(images/find.png) no-repeat 0 0;
+}
+ul.areas {
+    margin:0 0 0 16px;
+}
+ul.areas li {
+    padding:0 0 0 20px;
+    margin:0;
+    list-style-type:none;
+    background:url(images/bullet_grey.png) no-repeat 4px 3px;
+}
+
+
+/* SOME ADMIN STUFF
+----------------------------------------------------------*/
+.sub.admin.manage ul {
+    margin:0;
+}
+.sub.admin.manage ul li {
+    list-style-type:none;
+    margin:.2em 0;
+}
+
+/* COLORS
+----------------------------------------------------------*/
+#dashboard ul#data h3,
+ul#pluginCategories h3,
+#siteSettings h3,
+#dashboard ul#settings h3 {
+    border-color:#f0f0f0;
+}
+.post .metadata.admin input.text.hinted,
+.post .metadata.admin input.text.active {
+    border-color:#fff;
+}
+input.text,
+textarea {
+    background-color:#fff;
+    border-color:#b8b8b8;
+}
+body.dyn form#siteSettings span.hint.icons img {
+    border-color:#FFF;
+}
+body.dyn form#siteSettings span.hint.icons img.hover {
+    border-color:#FFC901;
+}
+body.dyn form#siteSettings span.hint.icons img.selected {
+    border-color:#62B957;
+}
+
+#dashboard .highlight h3 {
+    border-color:#dc2525 !important;
+}

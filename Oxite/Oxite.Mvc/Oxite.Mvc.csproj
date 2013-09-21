@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FA829C5E-E6EF-4029-891D-32D3F72693D0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Oxite.Mvc</RootNamespace>
+    <AssemblyName>Oxite.Mvc</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BlogML, Version=2.5.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\BlogML.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=1.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\bin\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration, Version=1.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\bin\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel.Web">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Routing">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActionFilters\AntiForgeryActionFilter.cs" />
+    <Compile Include="ActionFilters\AntiForgeryAuthorizationFilter.cs" />
+    <Compile Include="ActionFilters\ArchiveListActionFilter.cs" />
+    <Compile Include="ActionFilters\AtomResultActionFilter.cs" />
+    <Compile Include="ActionFilters\AuthorizationFilter.cs" />
+    <Compile Include="ActionFilters\ControllerActionCriteria.cs" />
+    <Compile Include="ActionFilters\AreaListActionFilter.cs" />
+    <Compile Include="ActionFilters\DashboardDataActionFilter.cs" />
+    <Compile Include="ActionFilters\CommentingDisabledActionFilter.cs" />
+    <Compile Include="ActionFilters\PageListActionFilter.cs" />
+    <Compile Include="ActionFilters\DataFormatCriteria.cs" />
+    <Compile Include="ActionFilters\LocalizationActionFilter.cs" />
+    <Compile Include="ActionFilters\PageSizeActionFilter.cs" />
+    <Compile Include="ActionFilters\RssResultActionFilter.cs" />
+    <Compile Include="ContainerFactory.cs" />
+    <Compile Include="Controllers\SiteController.cs" />
+    <Compile Include="Controllers\PluginController.cs" />
+    <Compile Include="Extensions\BlogMLExtensions.cs" />
+    <Compile Include="Extensions\HttpRequestExtensions.cs" />
+    <Compile Include="Extensions\HttpCookieCollectionExtensions.cs" />
+    <Compile Include="Infrastructure\AntiForgeryToken.cs" />
+    <Compile Include="Infrastructure\CommentVisitor.cs" />
+    <Compile Include="Infrastructure\PostVisitor.cs" />
+    <Compile Include="ModelBinders\AreaSearchCriteriaModelBinder.cs" />
+    <Compile Include="ModelBinders\UserModelBinder.cs" />
+    <Compile Include="ModelBinders\PageModelBinder.cs" />
+    <Compile Include="ModelBinders\PluginModelBinder.cs" />
+    <Compile Include="ModelBinders\PostModelBinder.cs" />
+    <Compile Include="ModelBinders\SiteModelBinder.cs" />
+    <Compile Include="Services\IMetaWeblog.cs" />
+    <Compile Include="Services\IPingbackServer.cs" />
+    <Compile Include="Services\MetaWeblogAPI.cs" />
+    <Compile Include="Services\OxiteServiceHostFactory.cs" />
+    <Compile Include="Extensions\ModelStateDictionaryExtensions.cs" />
+    <Compile Include="Services\PingbackService.cs" />
+    <Compile Include="ViewModels\ArchiveViewModel.cs" />
+    <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="ViewModels\AreaListViewModel.cs" />
+    <Compile Include="ViewModels\AdminDataViewModel.cs" />
+    <Compile Include="ViewModels\PageListViewModel.cs" />
+    <Compile Include="ViewModels\OxiteModelPartial.cs" />
+    <Compile Include="ViewModels\TrackbackViewModel.cs" />
+    <Compile Include="ViewModels\UserViewModel.cs" />
+    <Compile Include="ActionFilters\ActionFilterRecord.cs" />
+    <Compile Include="ActionFilters\ActionFilterRegistry.cs" />
+    <Compile Include="Controllers\UtilityController.cs" />
+    <Compile Include="ActionFilters\ActionFilterRegistryContext.cs" />
+    <Compile Include="ActionFilters\IActionFilterRegistry.cs" />
+    <Compile Include="ActionFilters\IActionFilterCriteria.cs" />
+    <Compile Include="ActionFilters\SiteInfoActionFilter.cs" />
+    <Compile Include="ActionFilters\UserActionFilter.cs" />
+    <Compile Include="ModelBinders\UserBaseModelBinder.cs" />
+    <Compile Include="ModelBinders\ArchiveDataModelBinder.cs" />
+    <Compile Include="Controllers\AreaController.cs" />
+    <Compile Include="Controllers\CommentController.cs" />
+    <Compile Include="Infrastructure\OxiteControllerFactory.cs" />
+    <Compile Include="Infrastructure\OxiteControllerActionInvoker.cs" />
+    <Compile Include="Controllers\PageController.cs" />
+    <Compile Include="Controllers\PostController.cs" />
+    <Compile Include="Controllers\TagController.cs" />
+    <Compile Include="Controllers\TrackbackController.cs" />
+    <Compile Include="ModelBinders\CommentModelBinder.cs" />
+    <Compile Include="ModelBinders\AreaModelBinder.cs" />
+    <Compile Include="ModelBinders\PostBaseModelBinder.cs" />
+    <Compile Include="ModelBinders\TagModelBinder.cs" />
+    <Compile Include="ModelBinders\SearchCriteriaModelBinder.cs" />
+    <Compile Include="Infrastructure\FormsAuthenticationWrapper.cs" />
+    <Compile Include="Extensions\DateTimeExtensions.cs" />
+    <Compile Include="Extensions\HtmlHelperExtensions.cs" />
+    <Compile Include="Extensions\HttpRequestBaseExtensions.cs" />
+    <Compile Include="Skinning\ISkinEngine.cs" />
+    <Compile Include="Extensions\NameValueCollectionExtensions.cs" />
+    <Compile Include="Results\NotFoundResult.cs" />
+    <Compile Include="OxiteApplication.cs" />
+    <Compile Include="ViewModels\OxiteModelItem.cs" />
+    <Compile Include="ViewModels\OxiteModelList.cs" />
+    <Compile Include="ViewModels\OxiteModel.cs" />
+    <Compile Include="Infrastructure\OxiteWebFormView.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Results\FeedResult.cs" />
+    <Compile Include="ViewModels\SiteViewModel.cs" />
+    <Compile Include="Extensions\UrlHelperExtensions.cs" />
+    <Compile Include="Infrastructure\OxiteViewEngine.cs" />
+    <Compile Include="Skinning\VirtualPathProviderSkinEngine.cs" />
+    <Compile Include="ViewModels\Extensions\UserViewModelExtensions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Oxite\Oxite.csproj">
+      <Project>{D54AF39D-CB43-4D32-A89D-D55EE924AB57}</Project>
+      <Name>Oxite</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oxite", "Oxite\Oxite.csproj", "{D54AF39D-CB43-4D32-A89D-D55EE924AB57}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oxite.Mvc", "Oxite.Mvc\Oxite.Mvc.csproj", "{FA829C5E-E6EF-4029-891D-32D3F72693D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oxite.LinqToSqlDataProvider", "Oxite.LinqToSqlDataProvider\Oxite.LinqToSqlDataProvider.csproj", "{BB60F32A-5C0A-45FB-80E2-7D4A7B9EFFE6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OxiteSite", "OxiteSite\OxiteSite.csproj", "{9F3B77E5-FD70-4C94-A8DE-503357FE7174}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oxite.Mvc.Tests", "Oxite.Mvc.Tests\Oxite.Mvc.Tests.csproj", "{42978282-8A22-4069-BF5A-A3F66AE63F5C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Default|Any CPU = Default|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D54AF39D-CB43-4D32-A89D-D55EE924AB57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D54AF39D-CB43-4D32-A89D-D55EE924AB57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D54AF39D-CB43-4D32-A89D-D55EE924AB57}.Default|Any CPU.ActiveCfg = Debug|Any CPU
+		{D54AF39D-CB43-4D32-A89D-D55EE924AB57}.Default|Any CPU.Build.0 = Debug|Any CPU
+		{D54AF39D-CB43-4D32-A89D-D55EE924AB57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D54AF39D-CB43-4D32-A89D-D55EE924AB57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA829C5E-E6EF-4029-891D-32D3F72693D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA829C5E-E6EF-4029-891D-32D3F72693D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA829C5E-E6EF-4029-891D-32D3F72693D0}.Default|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA829C5E-E6EF-4029-891D-32D3F72693D0}.Default|Any CPU.Build.0 = Debug|Any CPU
+		{FA829C5E-E6EF-4029-891D-32D3F72693D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA829C5E-E6EF-4029-891D-32D3F72693D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB60F32A-5C0A-45FB-80E2-7D4A7B9EFFE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB60F32A-5C0A-45FB-80E2-7D4A7B9EFFE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB60F32A-5C0A-45FB-80E2-7D4A7B9EFFE6}.Default|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB60F32A-5C0A-45FB-80E2-7D4A7B9EFFE6}.Default|Any CPU.Build.0 = Debug|Any CPU
+		{BB60F32A-5C0A-45FB-80E2-7D4A7B9EFFE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB60F32A-5C0A-45FB-80E2-7D4A7B9EFFE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F3B77E5-FD70-4C94-A8DE-503357FE7174}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F3B77E5-FD70-4C94-A8DE-503357FE7174}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F3B77E5-FD70-4C94-A8DE-503357FE7174}.Default|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F3B77E5-FD70-4C94-A8DE-503357FE7174}.Default|Any CPU.Build.0 = Debug|Any CPU
+		{9F3B77E5-FD70-4C94-A8DE-503357FE7174}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F3B77E5-FD70-4C94-A8DE-503357FE7174}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42978282-8A22-4069-BF5A-A3F66AE63F5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42978282-8A22-4069-BF5A-A3F66AE63F5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42978282-8A22-4069-BF5A-A3F66AE63F5C}.Default|Any CPU.ActiveCfg = Debug|Any CPU
+		{42978282-8A22-4069-BF5A-A3F66AE63F5C}.Default|Any CPU.Build.0 = Debug|Any CPU
+		{42978282-8A22-4069-BF5A-A3F66AE63F5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42978282-8A22-4069-BF5A-A3F66AE63F5C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

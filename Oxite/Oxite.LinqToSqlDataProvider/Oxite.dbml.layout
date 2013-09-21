@@ -1,0 +1,406 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 16.5, 20.75" name="Oxite">
+  <DataContextMoniker Name="/OxiteLinqToSqlDataContext" />
+  <nestedChildShapes>
+    <classShape Id="d27b009a-9956-4e46-9f3e-72eb6c5d61e9" absoluteBounds="3.625, 7.25, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/OxiteLinqToSqlDataContext/oxite_UserRoleRelationship" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5bd196b8-b192-4741-a625-2d26e7be7773" absoluteBounds="3.64, 7.7100000000000009, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ce68a284-8458-485f-8037-9982ad5dca91" absoluteBounds="3.5, 15.375, 2, 1.1939925130208309">
+      <DataClassMoniker Name="/OxiteLinqToSqlDataContext/oxite_AreaRoleRelationship" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5cb2e2b3-8abb-4476-b202-0a4d1b7acd5b" absoluteBounds="3.5150000000000006, 15.835, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9f9d5f85-5d51-40a1-9c1f-3b8b5f40ae62" absoluteBounds="6.375, 15.25, 2, 1.1939925130208309">
+      <DataClassMoniker Name="/OxiteLinqToSqlDataContext/oxite_PostAreaRelationship" />
+      <nestedChildShapes>
+        <elementListCompartment Id="40ed8dd9-99e9-48a3-800f-60f7a4ba5556" absoluteBounds="6.3900000000000006, 15.71, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="40e36530-f7e0-4473-ac10-c41387467f08" absoluteBounds="11.625, 14.625, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/OxiteLinqToSqlDataContext/oxite_PostTagRelationship" />
+      <nestedChildShapes>
+        <elementListCompartment Id="927f8ae1-df44-4378-826c-7194ddbc3b48" absoluteBounds="11.64, 15.085, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9b56b0ab-95cf-42ac-a6fd-b60be0bca1d3" absoluteBounds="6.375, 7.25, 2, 1.3862939453124987">
+      <DataClassMoniker Name="/OxiteLinqToSqlDataContext/oxite_Role" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a50cdc85-b211-4765-beea-e0cdc39e3bf5" absoluteBounds="6.39, 7.7100000000000009, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b791c4e2-d27e-4dc4-b76c-4e8e2e4008c4" absoluteBounds="3.5, 19.125, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/OxiteLinqToSqlDataContext/oxite_SubscriptionAnonymous" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f2805e5b-896c-463b-8d97-455906896a07" absoluteBounds="3.5150000000000006, 19.585, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f98038e0-7e03-42cb-bd4b-a110fa813d62" absoluteBounds="3.5, 10.25, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/OxiteLinqToSqlDataContext/oxite_UserFileResourceRelationship" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4ffbfe46-b67e-4cc3-a1e4-177c1d7fd14f" absoluteBounds="3.5149999999999997, 10.71, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(6.375 : 7.84699625651042); (5.625 : 7.84699625651042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/OxiteLinqToSqlDataContext/oxite_Role/oxite_Role_oxite_UserRoleRelationship" />
+      <nodes>
+        <classShapeMoniker Id="9b56b0ab-95cf-42ac-a6fd-b60be0bca1d3" />
+        <classShapeMoniker Id="d27b009a-9956-4e46-9f3e-72eb6c5d61e9" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.375 : 8.6362939453125); (6 : 9.0112939453125); (6 : 15.9719962565104); (5.95833333333333 : 15.9719962565104 : JumpStart); (5.79166666666667 : 15.9719962565104 : JumpEnd); (5.5 : 15.9719962565104)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/OxiteLinqToSqlDataContext/oxite_Role/oxite_Role_oxite_AreaRoleRelationship" />
+      <nodes>
+        <classShapeMoniker Id="9b56b0ab-95cf-42ac-a6fd-b60be0bca1d3" />
+        <classShapeMoniker Id="ce68a284-8458-485f-8037-9982ad5dca91" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.07431705603966 : 7.25); (7.07431705603966 : 7); (7.69000117938702 : 7); (7.69000117938702 : 7.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/OxiteLinqToSqlDataContext/oxite_Role/oxite_Role_oxite_Role" />
+      <nodes>
+        <classShapeMoniker Id="9b56b0ab-95cf-42ac-a6fd-b60be0bca1d3" />
+        <classShapeMoniker Id="9b56b0ab-95cf-42ac-a6fd-b60be0bca1d3" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="62f86c5b-efeb-4ca5-b491-8d882dc502f9" absoluteBounds="3.5, 12.25, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/OxiteLinqToSqlDataContext/oxite_FileResource" />
+      <nestedChildShapes>
+        <elementListCompartment Id="74892a06-c300-4cbb-aa9d-1016b7c9bf60" absoluteBounds="3.515, 12.71, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.5 : 12.25); (4.5 : 11.4439925130208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/OxiteLinqToSqlDataContext/oxite_FileResource/oxite_FileResource_oxite_UserFileResourceRelationship" />
+      <nodes>
+        <classShapeMoniker Id="62f86c5b-efeb-4ca5-b491-8d882dc502f9" />
+        <classShapeMoniker Id="f98038e0-7e03-42cb-bd4b-a110fa813d62" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="8f257f6f-53cf-408d-a4d4-c5b9c796a0df" absoluteBounds="6.375, 4.25, 2, 1.9631982421875003">
+      <DataClassMoniker Name="/OxiteLinqToSqlDataContext/oxite_StringResource" />
+      <nestedChildShapes>
+        <elementListCompartment Id="31dd23b1-4e63-4691-a28a-dddc8e5892cf" absoluteBounds="6.3900000000000006, 4.71, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b3cea831-5a7a-4ca9-af48-4b99bb35546b" absoluteBounds="9.125, 4.25, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/OxiteLinqToSqlDataContext/oxite_StringResourceVersion" />
+      <nestedChildShapes>
+        <elementListCompartment Id="372b83e8-a06d-4c4e-b9cb-35e971cc3386" absoluteBounds="9.14, 4.71, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.375 : 5.23159912109375); (9.125 : 5.23159912109375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/OxiteLinqToSqlDataContext/oxite_StringResource/oxite_StringResource_oxite_StringResourceVersion" />
+      <nodes>
+        <classShapeMoniker Id="8f257f6f-53cf-408d-a4d4-c5b9c796a0df" />
+        <classShapeMoniker Id="b3cea831-5a7a-4ca9-af48-4b99bb35546b" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="33a4f3a1-4a67-4d2d-a320-0d84e56c0dda" absoluteBounds="11.625, 17.375, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/OxiteLinqToSqlDataContext/oxite_Trackback" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f0503da6-f723-4def-aaeb-0ae92ea3233b" absoluteBounds="11.64, 17.835, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7d3901d7-164e-4056-a87f-3038596f5e21" absoluteBounds="3.5, 17, 2, 1.3862939453125">
+      <DataClassMoniker Name="/OxiteLinqToSqlDataContext/oxite_Subscription" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d144f871-c5ef-4a26-bde5-d033b1aa3b19" absoluteBounds="3.5149999999999997, 17.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.5 : 18.3862939453125); (4.5 : 19.125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/OxiteLinqToSqlDataContext/oxite_Subscription/oxite_Subscription_oxite_SubscriptionAnonymous" />
+      <nodes>
+        <classShapeMoniker Id="7d3901d7-164e-4056-a87f-3038596f5e21" />
+        <classShapeMoniker Id="b791c4e2-d27e-4dc4-b76c-4e8e2e4008c4" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="bdd0d0bd-8b7a-4179-8bb1-d34f03ad6155" absoluteBounds="14.25, 14.625, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/OxiteLinqToSqlDataContext/oxite_Tag" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cfe48019-d111-49da-9519-4195ec66f273" absoluteBounds="14.265, 15.085, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(14.25 : 15.3181469726563); (13.625 : 15.3181469726563)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/OxiteLinqToSqlDataContext/oxite_Tag/oxite_Tag_oxite_PostTagRelationship" />
+      <nodes>
+        <classShapeMoniker Id="bdd0d0bd-8b7a-4179-8bb1-d34f03ad6155" />
+        <classShapeMoniker Id="40e36530-f7e0-4473-ac10-c41387467f08" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(14.9524234637921 : 16.2035953776042); (14.9524234637921 : 16.4535953776042); (15.5617468474559 : 16.4535953776042); (15.5617468474559 : 16.2035953776042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/OxiteLinqToSqlDataContext/oxite_Tag/oxite_Tag_oxite_Tag" />
+      <nodes>
+        <classShapeMoniker Id="bdd0d0bd-8b7a-4179-8bb1-d34f03ad6155" />
+        <classShapeMoniker Id="bdd0d0bd-8b7a-4179-8bb1-d34f03ad6155" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="78023590-8c15-4dc1-9852-16b4a9d96720" absoluteBounds="0.75, 10.25, 2, 1.3862939453125">
+      <DataClassMoniker Name="/OxiteLinqToSqlDataContext/oxite_Language" />
+      <nestedChildShapes>
+        <elementListCompartment Id="aa8e5216-e53e-409f-8f05-be55a4b4a6fd" absoluteBounds="0.76499999999999968, 10.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a33fb358-c195-44c4-b337-95025134cb14" absoluteBounds="0.75, 7.25, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/OxiteLinqToSqlDataContext/oxite_UserLanguage" />
+      <nestedChildShapes>
+        <elementListCompartment Id="61ffc56e-d2eb-429a-802a-e9c6be761bff" absoluteBounds="0.765, 7.7100000000000009, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.75 : 10.25); (1.75 : 8.44399251302083)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/OxiteLinqToSqlDataContext/oxite_Language/oxite_Language_oxite_UserLanguage" />
+      <nodes>
+        <classShapeMoniker Id="78023590-8c15-4dc1-9852-16b4a9d96720" />
+        <classShapeMoniker Id="a33fb358-c195-44c4-b337-95025134cb14" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="edd26680-464a-483a-888d-235f3fd0c1f3" absoluteBounds="14.125, 10.75, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/OxiteLinqToSqlDataContext/oxite_CommentAnonymous" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f80b8e90-d959-4cc9-969f-ba4230335a13" absoluteBounds="14.14, 11.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="04c4519f-b6bd-4911-8e01-11d2ed1c881b" absoluteBounds="9.125, 7.25, 2, 2.5401025390625">
+      <DataClassMoniker Name="/OxiteLinqToSqlDataContext/oxite_User" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a32b51f3-0c91-43b8-ad61-49fc4e8357df" absoluteBounds="9.14, 7.7100000000000009, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(9.125 : 9.2444482421875); (4.625 : 9.2444482421875); (4.625 : 8.44399251302083)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/OxiteLinqToSqlDataContext/oxite_User/oxite_User_oxite_UserRoleRelationship" />
+      <nodes>
+        <classShapeMoniker Id="04c4519f-b6bd-4911-8e01-11d2ed1c881b" />
+        <classShapeMoniker Id="d27b009a-9956-4e46-9f3e-72eb6c5d61e9" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9.125 : 9.548527890625); (8.95833333333333 : 9.548527890625 : JumpStart); (8.79166666666667 : 9.548527890625 : JumpEnd); (6.08333333333333 : 9.548527890625 : JumpStart); (5.91666666666667 : 9.548527890625 : JumpEnd); (3.53125 : 9.548527890625); (3.53125 : 10.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/OxiteLinqToSqlDataContext/oxite_User/oxite_User_oxite_UserFileResourceRelationship" />
+      <nodes>
+        <classShapeMoniker Id="04c4519f-b6bd-4911-8e01-11d2ed1c881b" />
+        <classShapeMoniker Id="f98038e0-7e03-42cb-bd4b-a110fa813d62" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9.15884515384615 : 9.7901025390625); (8.93392556509887 : 10.0150221278098 : JumpStart); (8.81607443490113 : 10.1328732580076 : JumpEnd); (8.75 : 10.1989476929087); (8.75 : 14.0713520390625); (6.08333333333333 : 14.0713520390625 : JumpStart); (5.79166666666667 : 14.0713520390625 : JumpEnd); (5.5 : 14.0713520390625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/OxiteLinqToSqlDataContext/oxite_User/oxite_User_oxite_FileResource" />
+      <nodes>
+        <classShapeMoniker Id="04c4519f-b6bd-4911-8e01-11d2ed1c881b" />
+        <classShapeMoniker Id="62f86c5b-efeb-4ca5-b491-8d882dc502f9" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9.125 : 9.75779484675481); (8.71769230769231 : 10.1651025390625); (5.875 : 10.1651025390625); (5.875 : 16.625); (5.5 : 17)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/OxiteLinqToSqlDataContext/oxite_User/oxite_User_oxite_Subscription" />
+      <nodes>
+        <classShapeMoniker Id="04c4519f-b6bd-4911-8e01-11d2ed1c881b" />
+        <classShapeMoniker Id="7d3901d7-164e-4056-a87f-3038596f5e21" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9.125 : 8.94036859375); (8.95833333333333 : 8.94036859375 : JumpStart); (8.79166666666667 : 8.94036859375 : JumpEnd); (6.15425868489583 : 8.94036859375 : JumpStart); (5.98759201822917 : 8.94036859375 : JumpEnd); (4.70833333333333 : 8.94036859375 : JumpStart); (4.54166666666667 : 8.94036859375 : JumpEnd); (3.20833333333333 : 8.94036859375 : JumpStart); (3.04166666666667 : 8.94036859375 : JumpEnd); (2.2812525 : 8.94036859375); (2.2812525 : 8.44399251302083)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/OxiteLinqToSqlDataContext/oxite_User/oxite_User_oxite_UserLanguage" />
+      <nodes>
+        <classShapeMoniker Id="04c4519f-b6bd-4911-8e01-11d2ed1c881b" />
+        <classShapeMoniker Id="a33fb358-c195-44c4-b337-95025134cb14" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 10.5653214863281); (3.04166666666667 : 10.5653214863281 : JumpStart); (3.20833333333333 : 10.5653214863281 : JumpEnd); (3.25 : 10.5653214863281); (3.25 : 10.0401025390625); (5.91666666666667 : 10.0401025390625 : JumpStart); (6.08333333333333 : 10.0401025390625 : JumpEnd); (8.75935897435898 : 10.0401025390625 : JumpStart); (8.99217848717951 : 10.0401025390625 : JumpEnd); (10.1731745769231 : 10.0401025390625); (10.1731745769231 : 9.7901025390625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/OxiteLinqToSqlDataContext/oxite_Language/oxite_Language_oxite_User" />
+      <nodes>
+        <classShapeMoniker Id="78023590-8c15-4dc1-9852-16b4a9d96720" />
+        <classShapeMoniker Id="04c4519f-b6bd-4911-8e01-11d2ed1c881b" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="8f5e0931-3613-4832-bafd-fb0073a2456f" absoluteBounds="9.125, 15.25, 2, 1.3862939453125">
+      <DataClassMoniker Name="/OxiteLinqToSqlDataContext/oxite_PostRelationship" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ffcbacfc-8f68-4f65-9783-46475b824150" absoluteBounds="9.14, 15.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="54cc4ab3-8d54-4d9f-aed2-dfb2abc27a1e" absoluteBounds="3.625, 0.75, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/OxiteLinqToSqlDataContext/oxite_SiteRedirect" />
+      <nestedChildShapes>
+        <elementListCompartment Id="efb08c01-6ef3-4a98-80ed-49d6ab787543" absoluteBounds="3.6399999999999997, 1.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d5c905bd-86b8-4c22-9882-54210661bc29" absoluteBounds="3.625, 4.875, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/OxiteLinqToSqlDataContext/oxite_PluginSetting" />
+      <nestedChildShapes>
+        <elementListCompartment Id="67bec6e1-eac3-41aa-8023-955208ecc282" absoluteBounds="3.64, 5.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6a4fe465-bdc0-4883-8d96-eeb75e0d7fb3" absoluteBounds="3.625, 2.5, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/OxiteLinqToSqlDataContext/oxite_Plugin" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2b0d1cea-3029-4d9f-b084-0613a0aa1491" absoluteBounds="3.64, 2.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.625 : 4.27089680989583); (4.625 : 4.875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/OxiteLinqToSqlDataContext/oxite_Plugin/oxite_Plugin_oxite_PluginSetting" />
+      <nodes>
+        <classShapeMoniker Id="6a4fe465-bdc0-4883-8d96-eeb75e0d7fb3" />
+        <classShapeMoniker Id="d5c905bd-86b8-4c22-9882-54210661bc29" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="92ee1362-1b7d-45b6-b029-faec539f6659" absoluteBounds="11.625, 10.75, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/OxiteLinqToSqlDataContext/oxite_Comment" />
+      <nestedChildShapes>
+        <elementListCompartment Id="17ea512a-11fa-4dd6-a644-7b38833b3307" absoluteBounds="11.64, 11.21, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(13.625 : 11.6354484049479); (14.125 : 11.6354484049479)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/OxiteLinqToSqlDataContext/oxite_Comment/oxite_Comment_oxite_CommentAnonymous" />
+      <nodes>
+        <classShapeMoniker Id="92ee1362-1b7d-45b6-b029-faec539f6659" />
+        <classShapeMoniker Id="edd26680-464a-483a-888d-235f3fd0c1f3" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 10.9431469726562); (3 : 10.9431469726562); (3 : 9.9151025390625); (3.04166666666667 : 9.9151025390625 : JumpStart); (3.20833333333333 : 9.9151025390625 : JumpEnd); (5.91666666666667 : 9.9151025390625 : JumpStart); (6.08333333333333 : 9.9151025390625 : JumpEnd); (8.79166666666667 : 9.9151025390625 : JumpStart); (9.1171784871795 : 9.9151025390625 : JumpEnd); (10.0898412435898 : 9.9151025390625 : JumpStart); (10.2565079102564 : 9.9151025390625 : JumpEnd); (12.625 : 9.9151025390625); (12.625 : 10.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/OxiteLinqToSqlDataContext/oxite_Language/oxite_Language_oxite_Comment" />
+      <nodes>
+        <classShapeMoniker Id="78023590-8c15-4dc1-9852-16b4a9d96720" />
+        <classShapeMoniker Id="92ee1362-1b7d-45b6-b029-faec539f6659" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.125 : 8.52005126953125); (12.625 : 8.52005126953125); (12.625 : 10.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/OxiteLinqToSqlDataContext/oxite_User/oxite_User_oxite_Comment" />
+      <nodes>
+        <classShapeMoniker Id="04c4519f-b6bd-4911-8e01-11d2ed1c881b" />
+        <classShapeMoniker Id="92ee1362-1b7d-45b6-b029-faec539f6659" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="cb9f2e45-b4eb-4360-995e-36e51cef124a" absoluteBounds="6.375, 0.75, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/OxiteLinqToSqlDataContext/oxite_MessageOutbound" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a0f68f11-3040-49e1-9712-98424155cb14" absoluteBounds="6.39, 1.21, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1a8ec055-32e8-44d3-9085-f36826760a46" absoluteBounds="0.75, 0.75, 2, 4.8477197265625">
+      <DataClassMoniker Name="/OxiteLinqToSqlDataContext/oxite_Site" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7239bbbc-f307-44a1-9e67-e5e62096332a" absoluteBounds="0.765, 1.21, 1.9700000000000002, 4.2877197265625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.718748 : 5.5977197265625); (1.718748 : 6.75); (3.04166666666667 : 6.75 : JumpStart); (3.20833333333333 : 6.75 : JumpEnd); (8.875 : 6.75); (8.875 : 15.9431469726562); (9.125 : 15.9431469726562)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/OxiteLinqToSqlDataContext/oxite_Site/oxite_Site_oxite_PostRelationship" />
+      <nodes>
+        <classShapeMoniker Id="1a8ec055-32e8-44d3-9085-f36826760a46" />
+        <classShapeMoniker Id="8f5e0931-3613-4832-bafd-fb0073a2456f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 1.34699625651042); (3.625 : 1.34699625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/OxiteLinqToSqlDataContext/oxite_Site/oxite_Site_oxite_SiteRedirect" />
+      <nodes>
+        <classShapeMoniker Id="1a8ec055-32e8-44d3-9085-f36826760a46" />
+        <classShapeMoniker Id="54cc4ab3-8d54-4d9f-aed2-dfb2abc27a1e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 5.23635986328125); (3.625 : 5.23635986328125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/OxiteLinqToSqlDataContext/oxite_Site/oxite_Site_oxite_PluginSetting" />
+      <nodes>
+        <classShapeMoniker Id="1a8ec055-32e8-44d3-9085-f36826760a46" />
+        <classShapeMoniker Id="d5c905bd-86b8-4c22-9882-54210661bc29" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 3.38544840494792); (3.625 : 3.38544840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/OxiteLinqToSqlDataContext/oxite_Site/oxite_Site_oxite_Plugin" />
+      <nodes>
+        <classShapeMoniker Id="1a8ec055-32e8-44d3-9085-f36826760a46" />
+        <classShapeMoniker Id="6a4fe465-bdc0-4883-8d96-eeb75e0d7fb3" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="afc6e685-7925-4928-83eb-ddb8044a2797" absoluteBounds="6.375, 10.75, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/OxiteLinqToSqlDataContext/oxite_Area" />
+      <nestedChildShapes>
+        <elementListCompartment Id="71d88ec7-ab36-4ce8-bce7-db79130d95b5" absoluteBounds="6.39, 11.21, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(6.43653746153846 : 13.0978011067708); (6.0625 : 13.4718385683093); (6.0625 : 15.6422461282552); (5.95833333333333 : 15.6422461282552 : JumpStart); (5.79166666666667 : 15.6422461282552 : JumpEnd); (5.5 : 15.6422461282552)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/OxiteLinqToSqlDataContext/oxite_Area/oxite_Area_oxite_AreaRoleRelationship" />
+      <nodes>
+        <classShapeMoniker Id="afc6e685-7925-4928-83eb-ddb8044a2797" />
+        <classShapeMoniker Id="ce68a284-8458-485f-8037-9982ad5dca91" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.9375 : 13.0978011067708); (7.9375 : 15.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/OxiteLinqToSqlDataContext/oxite_Area/oxite_Area_oxite_PostAreaRelationship" />
+      <nodes>
+        <classShapeMoniker Id="afc6e685-7925-4928-83eb-ddb8044a2797" />
+        <classShapeMoniker Id="9f9d5f85-5d51-40a1-9c1f-3b8b5f40ae62" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 5.5977197265625); (3.125 : 5.9727197265625); (3.125 : 11.8469962565104); (4.41666666666667 : 11.8469962565104 : JumpStart); (4.58333333333333 : 11.8469962565104 : JumpEnd); (5.79166666666667 : 11.8469962565104 : JumpStart); (5.95833333333333 : 11.8469962565104 : JumpEnd); (6.375 : 11.8469962565104)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/OxiteLinqToSqlDataContext/oxite_Site/oxite_Site_oxite_Area" />
+      <nodes>
+        <classShapeMoniker Id="1a8ec055-32e8-44d3-9085-f36826760a46" />
+        <classShapeMoniker Id="afc6e685-7925-4928-83eb-ddb8044a2797" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="86c8e436-db88-4269-8b9c-5ca3e825da08" absoluteBounds="9.125, 10.75, 2, 3.1170068359375">
+      <DataClassMoniker Name="/OxiteLinqToSqlDataContext/oxite_Post" />
+      <nestedChildShapes>
+        <elementListCompartment Id="900c4a7d-3982-492b-b5e5-87a2c76951a5" absoluteBounds="9.14, 11.21, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(9.125 : 13.8346991436298); (8.93392556509888 : 14.0257735785309 : JumpStart); (8.81607443490112 : 14.1436247087287 : JumpEnd); (8.46769230769231 : 14.4920068359375); (7.124998 : 14.4920068359375); (7.124998 : 15.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/OxiteLinqToSqlDataContext/oxite_Post/oxite_Post_oxite_PostAreaRelationship" />
+      <nodes>
+        <classShapeMoniker Id="86c8e436-db88-4269-8b9c-5ca3e825da08" />
+        <classShapeMoniker Id="9f9d5f85-5d51-40a1-9c1f-3b8b5f40ae62" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.125 : 13.8670068359375); (11.5 : 14.2420068359375); (11.5 : 14.25); (11.25 : 14.25); (11.625 : 14.625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/OxiteLinqToSqlDataContext/oxite_Post/oxite_Post_oxite_PostTagRelationship" />
+      <nodes>
+        <classShapeMoniker Id="86c8e436-db88-4269-8b9c-5ca3e825da08" />
+        <classShapeMoniker Id="40e36530-f7e0-4473-ac10-c41387467f08" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(10.125 : 13.8670068359375); (10.125 : 15); (10.5729141666667 : 15 : JumpStart); (10.7395808333333 : 15 : JumpEnd); (11.375 : 15); (11.375 : 18.7412019856771); (11.625 : 18.7412019856771)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/OxiteLinqToSqlDataContext/oxite_Post/oxite_Post_oxite_Trackback" />
+      <nodes>
+        <classShapeMoniker Id="86c8e436-db88-4269-8b9c-5ca3e825da08" />
+        <classShapeMoniker Id="33a4f3a1-4a67-4d2d-a320-0d84e56c0dda" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9.22038361538462 : 13.8670068359375); (8.93392556509888 : 14.1534648862232 : JumpStart); (8.81607443490112 : 14.271316016421 : JumpEnd); (8.8125 : 14.2748904513221); (8.8125 : 17.7243989726563); (5.5 : 17.7243989726563)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/OxiteLinqToSqlDataContext/oxite_Post/oxite_Post_oxite_Subscription" />
+      <nodes>
+        <classShapeMoniker Id="86c8e436-db88-4269-8b9c-5ca3e825da08" />
+        <classShapeMoniker Id="7d3901d7-164e-4056-a87f-3038596f5e21" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(10.6562475 : 13.8670068359375); (10.6562475 : 15.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/OxiteLinqToSqlDataContext/oxite_Post/oxite_Post_oxite_PostRelationship" />
+      <nodes>
+        <classShapeMoniker Id="86c8e436-db88-4269-8b9c-5ca3e825da08" />
+        <classShapeMoniker Id="8f5e0931-3613-4832-bafd-fb0073a2456f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9.64144430769231 : 13.8670068359375); (9.64144430769231 : 15.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/OxiteLinqToSqlDataContext/oxite_Post/oxite_Post_oxite_PostRelationship1" />
+      <nodes>
+        <classShapeMoniker Id="86c8e436-db88-4269-8b9c-5ca3e825da08" />
+        <classShapeMoniker Id="8f5e0931-3613-4832-bafd-fb0073a2456f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.125 : 12.1162019856771); (11.625 : 12.1162019856771)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/OxiteLinqToSqlDataContext/oxite_Post/oxite_Post_oxite_Comment" />
+      <nodes>
+        <classShapeMoniker Id="86c8e436-db88-4269-8b9c-5ca3e825da08" />
+        <classShapeMoniker Id="92ee1362-1b7d-45b6-b029-faec539f6659" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9.63476236538462 : 9.7901025390625); (9.63476236538462 : 10.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/OxiteLinqToSqlDataContext/oxite_User/oxite_User_oxite_Post" />
+      <nodes>
+        <classShapeMoniker Id="04c4519f-b6bd-4911-8e01-11d2ed1c881b" />
+        <classShapeMoniker Id="86c8e436-db88-4269-8b9c-5ca3e825da08" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="410f2aec-a81c-427c-a6a0-faa16b2d4856" absoluteBounds="9.125, 0.75, 2, 2.9247054036458331">
+      <DataClassMoniker Name="/OxiteLinqToSqlDataContext/oxite_TrackbackOutbound" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e81f0707-0a74-481d-a25e-805a8d27bb35" absoluteBounds="9.14, 1.21, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

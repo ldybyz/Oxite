@@ -1,0 +1,360 @@
+﻿<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MvcBuildViews>true</MvcBuildViews>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9F3B77E5-FD70-4C94-A8DE-503357FE7174}</ProjectGuid>
+    <ProjectTypeGuids>{603c0e0b-db56-11dc-be95-000d561079b0};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OxiteSite</RootNamespace>
+    <AssemblyName>OxiteSite</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Abstractions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files\Microsoft ASP.NET\ASP.NET MVC Beta\Assemblies\System.Web.Abstractions.dll</HintPath>
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files (x86)\Microsoft ASP.NET\ASP.NET MVC RC\Assemblies\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Routing, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files\Microsoft ASP.NET\ASP.NET MVC Beta\Assemblies\System.Web.Routing.dll</HintPath>
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\Oxite.Database.mdf">
+    </Content>
+    <Content Include="App_Data\Oxite.Database_log.ldf">
+      <DependentUpon>Oxite.Database.mdf</DependentUpon>
+    </Content>
+    <Content Include="Pingback.svc" />
+    <Content Include="MetaWeblog.svc" />
+    <Content Include="Skins\Default\Scripts\jquery-1.3.1.js" />
+    <Content Include="Skins\Default\Scripts\jquery-1.3.1.min.js" />
+    <Content Include="Skins\Default\Styles\images\accept.png" />
+    <Content Include="Skins\Default\Styles\images\admin.png" />
+    <Content Include="Skins\Default\Styles\images\bullet_grey.png" />
+    <Content Include="Skins\Default\Styles\images\bullet_blue.png" />
+    <Content Include="Skins\Default\Styles\images\bullet_red.png" />
+    <Content Include="Skins\Default\Styles\images\bullet_toggle_minus.png" />
+    <Content Include="Skins\Default\Styles\images\bullet_toggle_plus.png" />
+    <Content Include="Skins\Default\Styles\images\calendar.png" />
+    <Content Include="Skins\Default\Styles\images\bullet_toggle_plus_onoff.png" />
+    <Content Include="Skins\Default\Styles\images\bullet_toggle_minus_onoff.png" />
+    <Content Include="Skins\Default\Styles\images\calendar\222222_11x11_icon_arrows_leftright.gif" />
+    <Content Include="Skins\Default\Styles\images\calendar\222222_11x11_icon_arrows_updown.gif" />
+    <Content Include="Skins\Default\Styles\images\calendar\222222_11x11_icon_close.gif" />
+    <Content Include="Skins\Default\Styles\images\calendar\222222_11x11_icon_doc.gif" />
+    <Content Include="Skins\Default\Styles\images\calendar\222222_11x11_icon_folder_closed.gif" />
+    <Content Include="Skins\Default\Styles\images\calendar\222222_11x11_icon_folder_open.gif" />
+    <Content Include="Skins\Default\Styles\images\calendar\222222_11x11_icon_minus.gif" />
+    <Content Include="Skins\Default\Styles\images\calendar\222222_11x11_icon_plus.gif" />
+    <Content Include="Skins\Default\Styles\images\calendar\222222_11x11_icon_resize_se.gif" />
+    <Content Include="Skins\Default\Styles\images\calendar\222222_35x9_colorpicker_indicator.gif.gif" />
+    <Content Include="Skins\Default\Styles\images\calendar\222222_7x7_arrow_down.gif" />
+    <Content Include="Skins\Default\Styles\images\calendar\222222_7x7_arrow_left.gif" />
+    <Content Include="Skins\Default\Styles\images\calendar\222222_7x7_arrow_right.gif" />
+    <Content Include="Skins\Default\Styles\images\calendar\222222_7x7_arrow_up.gif" />
+    <Content Include="Skins\Default\Styles\images\calendar\888888_11x11_icon_arrows_leftright.gif" />
+    <Content Include="Skins\Default\Styles\images\calendar\888888_11x11_icon_arrows_updown.gif" />
+    <Content Include="Skins\Default\Styles\images\calendar\888888_11x11_icon_close.gif" />
+    <Content Include="Skins\Default\Styles\images\calendar\888888_11x11_icon_doc.gif" />
+    <Content Include="Skins\Default\Styles\images\calendar\888888_11x11_icon_folder_closed.gif" />
+    <Content Include="Skins\Default\Styles\images\calendar\888888_11x11_icon_folder_open.gif" />
+    <Content Include="Skins\Default\Styles\images\calendar\888888_11x11_icon_minus.gif" />
+    <Content Include="Skins\Default\Styles\images\calendar\888888_11x11_icon_plus.gif" />
+    <Content Include="Skins\Default\Styles\images\calendar\888888_7x7_arrow_down.gif" />
+    <Content Include="Skins\Default\Styles\images\calendar\888888_7x7_arrow_left.gif" />
+    <Content Include="Skins\Default\Styles\images\calendar\888888_7x7_arrow_right.gif" />
+    <Content Include="Skins\Default\Styles\images\calendar\888888_7x7_arrow_up.gif" />
+    <Content Include="Skins\Default\Styles\images\calendar\8ab9ff_40x100_textures_02_glass_50.png" />
+    <Content Include="Skins\Default\Styles\images\calendar\d3d3d3_40x100_textures_02_glass_80.png" />
+    <Content Include="Skins\Default\Styles\images\calendar\d8d8d8_40x100_textures_02_glass_90.png" />
+    <Content Include="Skins\Default\Styles\images\calendar\e9e9e9_40x100_textures_01_flat_0.png" />
+    <Content Include="Skins\Default\Styles\images\calendar\ffffff_11x11_icon_arrows_leftright.gif" />
+    <Content Include="Skins\Default\Styles\images\calendar\ffffff_11x11_icon_arrows_updown.gif" />
+    <Content Include="Skins\Default\Styles\images\calendar\ffffff_11x11_icon_close.gif" />
+    <Content Include="Skins\Default\Styles\images\calendar\ffffff_11x11_icon_doc.gif" />
+    <Content Include="Skins\Default\Styles\images\calendar\ffffff_11x11_icon_folder_closed.gif" />
+    <Content Include="Skins\Default\Styles\images\calendar\ffffff_11x11_icon_folder_open.gif" />
+    <Content Include="Skins\Default\Styles\images\calendar\ffffff_11x11_icon_minus.gif" />
+    <Content Include="Skins\Default\Styles\images\calendar\ffffff_11x11_icon_plus.gif" />
+    <Content Include="Skins\Default\Styles\images\calendar\ffffff_7x7_arrow_down.gif" />
+    <Content Include="Skins\Default\Styles\images\calendar\ffffff_7x7_arrow_left.gif" />
+    <Content Include="Skins\Default\Styles\images\calendar\ffffff_7x7_arrow_right.gif" />
+    <Content Include="Skins\Default\Styles\images\calendar\ffffff_7x7_arrow_up.gif" />
+    <Content Include="Skins\Default\Styles\images\delete.png" />
+    <Content Include="Skins\Default\Styles\images\famfamfam.gif" />
+    <Content Include="Skins\Default\Styles\images\gravatar.gif" />
+    <Content Include="Skins\Default\Styles\images\information.png" />
+    <Content Include="Skins\Default\Styles\images\oxite.png" />
+    <Content Include="Skins\Default\Styles\images\page_add.png" />
+    <Content Include="Skins\Default\Styles\images\page_delete.png" />
+    <Content Include="Skins\Default\Styles\images\page_edit.png" />
+    <Content Include="Skins\Default\Styles\images\tag_red.png" />
+    <Content Include="Skins\Default\Styles\jquery.css" />
+    <Content Include="LiveWriterManifest.xml" />
+    <Content Include="Skins\Default\Styles\site.css" />
+    <Content Include="Skins\Default\Scripts\site.js" />
+    <Content Include="Content\images\valid-rss.png" />
+    <Content Include="Content\images\valid-xhtml10-blue.png" />
+    <Content Include="Content\images\vcss-blue.gif" />
+    <Content Include="Skins\Default\Styles\yui.reset.2.6.0.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Skins\Default\Scripts\ui\i18n\ui.datepicker-ar.js" />
+    <Content Include="Skins\Default\Scripts\ui\i18n\ui.datepicker-bg.js" />
+    <Content Include="Skins\Default\Scripts\ui\i18n\ui.datepicker-ca.js" />
+    <Content Include="Skins\Default\Scripts\ui\i18n\ui.datepicker-cs.js" />
+    <Content Include="Skins\Default\Scripts\ui\i18n\ui.datepicker-da.js" />
+    <Content Include="Skins\Default\Scripts\ui\i18n\ui.datepicker-de.js" />
+    <Content Include="Skins\Default\Scripts\ui\i18n\ui.datepicker-es.js" />
+    <Content Include="Skins\Default\Scripts\ui\i18n\ui.datepicker-fi.js" />
+    <Content Include="Skins\Default\Scripts\ui\i18n\ui.datepicker-fr.js" />
+    <Content Include="Skins\Default\Scripts\ui\i18n\ui.datepicker-he.js" />
+    <Content Include="Skins\Default\Scripts\ui\i18n\ui.datepicker-hu.js" />
+    <Content Include="Skins\Default\Scripts\ui\i18n\ui.datepicker-hy.js" />
+    <Content Include="Skins\Default\Scripts\ui\i18n\ui.datepicker-id.js" />
+    <Content Include="Skins\Default\Scripts\ui\i18n\ui.datepicker-is.js" />
+    <Content Include="Skins\Default\Scripts\ui\i18n\ui.datepicker-it.js" />
+    <Content Include="Skins\Default\Scripts\ui\i18n\ui.datepicker-ja.js" />
+    <Content Include="Skins\Default\Scripts\ui\i18n\ui.datepicker-ko.js" />
+    <Content Include="Skins\Default\Scripts\ui\i18n\ui.datepicker-lt.js" />
+    <Content Include="Skins\Default\Scripts\ui\i18n\ui.datepicker-lv.js" />
+    <Content Include="Skins\Default\Scripts\ui\i18n\ui.datepicker-nl.js" />
+    <Content Include="Skins\Default\Scripts\ui\i18n\ui.datepicker-no.js" />
+    <Content Include="Skins\Default\Scripts\ui\i18n\ui.datepicker-pl.js" />
+    <Content Include="Skins\Default\Scripts\ui\i18n\ui.datepicker-pt-BR.js" />
+    <Content Include="Skins\Default\Scripts\ui\i18n\ui.datepicker-ro.js" />
+    <Content Include="Skins\Default\Scripts\ui\i18n\ui.datepicker-ru.js" />
+    <Content Include="Skins\Default\Scripts\ui\i18n\ui.datepicker-sk.js" />
+    <Content Include="Skins\Default\Scripts\ui\i18n\ui.datepicker-sv.js" />
+    <Content Include="Skins\Default\Scripts\ui\i18n\ui.datepicker-th.js" />
+    <Content Include="Skins\Default\Scripts\ui\i18n\ui.datepicker-tr.js" />
+    <Content Include="Skins\Default\Scripts\ui\i18n\ui.datepicker-uk.js" />
+    <Content Include="Skins\Default\Scripts\ui\i18n\ui.datepicker-zh-CN.js" />
+    <Content Include="Skins\Default\Scripts\ui\i18n\ui.datepicker-zh-TW.js" />
+    <Content Include="Views\Site\Dashboard.aspx" />
+    <Content Include="Views\Area\Find.aspx" />
+    <Content Include="Views\Area\ItemEdit.aspx" />
+    <Content Include="Views\Area\BlogML.aspx" />
+    <Content Include="Views\Plugin\Item.aspx" />
+    <Content Include="Views\Plugin\List.aspx" />
+    <Content Include="Views\Site\Item.aspx" />
+    <Content Include="Views\User\ChangePassword.aspx" />
+    <Content Include="Views\Page\Item.aspx" />
+    <Content Include="Views\Post\ItemAdd.aspx" />
+    <Content Include="Views\Post\ItemEditButtons.ascx" />
+    <Content Include="Views\Post\ItemEditForm.ascx" />
+    <Content Include="Views\Post\List.aspx" />
+    <Content Include="Views\Post\Atom.aspx" />
+    <Content Include="Views\Post\Item.aspx" />
+    <Content Include="Views\Post\Rss.aspx" />
+    <Content Include="Views\Post\ListByTag.aspx" />
+    <Content Include="Views\Shared\ArchiveBreadcrumb.ascx" />
+    <Content Include="Views\Shared\CommentCreatorInfo.ascx" />
+    <Content Include="Views\Shared\ArchivesByYear.ascx" />
+    <Content Include="Views\Post\ItemEditPrimaryMetadata.ascx" />
+    <Content Include="Views\Post\ItemEditSecondaryMetadata.ascx" />
+    <Content Include="Views\Post\ItemEdit.aspx" />
+    <Content Include="Views\Post\ListByArchive.aspx" />
+    <Content Include="Views\Post\ListByArea.aspx" />
+    <Content Include="Views\Shared\PostListMedium.ascx" />
+    <Content Include="Views\Utility\OpenSearch.aspx" />
+    <Content Include="Views\Post\ListBySearch.aspx" />
+    <Content Include="Views\Comment\Rss.aspx" />
+    <Content Include="Views\Shared\Archives.ascx" />
+    <Content Include="Views\Shared\Comment.ascx" />
+    <Content Include="Views\Post\CommentFormAnonymous.ascx" />
+    <Content Include="Views\Post\CommentFormAuthenticated.ascx" />
+    <Content Include="Views\Post\Comments.ascx" />
+    <Content Include="Views\Pingback\IndexError.aspx" />
+    <Content Include="Views\Pingback\IndexSuccess.aspx" />
+    <Content Include="Views\Shared\Footer.ascx" />
+    <Content Include="Views\Shared\HeadCustomContents.ascx" />
+    <Content Include="Views\Shared\Header.ascx" />
+    <Content Include="Views\Shared\ManageComment.ascx" />
+    <Content Include="Views\Page\ManagePage.ascx" />
+    <Content Include="Views\Post\ManagePost.ascx" />
+    <Content Include="Views\Shared\NotFound.aspx" />
+    <Content Include="Views\Comment\Atom.aspx" />
+    <Content Include="Views\Utility\RobotsTxt.aspx" />
+    <Content Include="Views\Shared\Search.ascx" />
+    <Content Include="Views\Utility\SiteMapIndex.aspx" />
+    <Content Include="Views\Utility\SiteMap.aspx" />
+    <Content Include="Views\Tag\Cloud.aspx" />
+    <Content Include="Views\Trackback\Add.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="Views\User\SignIn.aspx" />
+    <Content Include="Views\Shared\Error.aspx" />
+    <Content Include="Views\Shared\LoginUserControl.ascx" />
+    <Content Include="Views\Shared\Site.Master" />
+    <Content Include="Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Oxite.LinqToSqlDataProvider\Oxite.LinqToSqlDataProvider.csproj">
+      <Project>{BB60F32A-5C0A-45FB-80E2-7D4A7B9EFFE6}</Project>
+      <Name>Oxite.LinqToSqlDataProvider</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Oxite.Mvc\Oxite.Mvc.csproj">
+      <Project>{FA829C5E-E6EF-4029-891D-32D3F72693D0}</Project>
+      <Name>Oxite.Mvc</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Oxite\Oxite.csproj">
+      <Project>{D54AF39D-CB43-4D32-A89D-D55EE924AB57}</Project>
+      <Name>Oxite</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\icons\flame.ico" />
+    <Content Include="Content\images\flame.png" />
+    <Content Include="Content\icons\frog.ico" />
+    <Content Include="Content\images\frog.png" />
+    <Content Include="Content\icons\mushroom.ico" />
+    <Content Include="Content\images\mushroom.png" />
+    <Content Include="Skins\Default\Scripts\admin.js" />
+    <Content Include="Skins\Default\Scripts\jquery-ui-20081126-1.5.2.js" />
+    <Content Include="Skins\Default\Scripts\jquery-ui-20081126-1.5.2.min.js" />
+    <Content Include="Skins\Default\Scripts\ui\i18n\jquery.ui.i18n.all.js" />
+    <Content Include="Skins\Default\Scripts\ui\i18n\ui.datepicker-eo.js" />
+    <Content Include="Skins\Default\Scripts\ui\i18n\ui.datepicker-hr.js" />
+    <Content Include="Skins\Default\Scripts\ui\i18n\ui.datepicker-sl.js" />
+    <Content Include="Skins\Default\Styles\admin.css" />
+    <Content Include="Skins\Default\Styles\images\add.png" />
+    <Content Include="Skins\Default\Styles\images\asterisk_yellow.png" />
+    <Content Include="Skins\Default\Styles\images\find.png" />
+    <Content Include="Skins\Default\Styles\images\plugin.png" />
+    <Content Include="Skins\Default\Styles\images\plugin_disabled.png" />
+    <Content Include="Views\Comment\ListForAdmin.aspx" />
+    <Content Include="Views\Page\ItemAdd.aspx" />
+    <Content Include="Views\Page\ItemEdit.aspx" />
+    <Content Include="Views\Page\ItemEditButtons.ascx" />
+    <Content Include="Views\Page\ItemEditForm.ascx" />
+    <Content Include="Views\Page\ItemEditPrimaryMetadata.ascx" />
+    <Content Include="Views\Page\ItemEditSecondaryMetadata.ascx" />
+    <Content Include="Views\Post\ListWithDrafts.aspx" />
+    <Content Include="Views\Shared\CommentListSmall.ascx" />
+    <Content Include="Views\Shared\CommentListMedium.ascx" />
+    <Content Include="Views\Shared\PostListSmall.ascx" />
+    <Content Include="Views\Shared\Admin.Master" />
+    <Content Include="Views\Shared\HeadCustomAdminContents.ascx" />
+    <Content Include="Views\Shared\SideBar.ascx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\icons\flame.png" />
+    <Content Include="Content\icons\frog.png" />
+    <Content Include="Content\icons\mushroom.png" />
+    <Content Include="Skins\Default\Styles\images\exclamation.png" />
+    <Content Include="Skins\Default\Styles\images\newspaper.png" />
+    <Content Include="Skins\Default\Styles\images\oxite_logo.png" />
+    <Content Include="Skins\Default\Styles\images\windows_search.png" />
+    <Content Include="Skins\Web.config" />
+    <Content Include="Views\Utility\OpenSearchOSDX.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  -->
+  <Target Name="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(ProjectDir)\..\$(ProjectName)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>30913</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/Oxite</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

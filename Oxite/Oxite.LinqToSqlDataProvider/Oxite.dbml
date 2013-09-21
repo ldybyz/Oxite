@@ -1,0 +1,340 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="Oxite.Database" EntityNamespace="Oxite.LinqToSqlDataProvider" ContextNamespace="Oxite.LinqToSqlDataProvider" Class="OxiteLinqToSqlDataContext" Serialization="Unidirectional" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="ConnectionString" ConnectionString="Data Source=.\SQLEXPRESS;Initial Catalog=Oxite.Database;Integrated Security=True" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.oxite_UserRoleRelationship" Member="oxite_UserRoleRelationships" AccessModifier="Internal">
+    <Type Name="oxite_UserRoleRelationship">
+      <Column Name="UserID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="RoleID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="oxite_Role_oxite_UserRoleRelationship" Member="oxite_Role" ThisKey="RoleID" OtherKey="RoleID" Type="oxite_Role" IsForeignKey="true" />
+      <Association Name="oxite_User_oxite_UserRoleRelationship" Member="oxite_User" ThisKey="UserID" OtherKey="UserID" Type="oxite_User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.oxite_AreaRoleRelationship" Member="oxite_AreaRoleRelationships" AccessModifier="Internal">
+    <Type Name="oxite_AreaRoleRelationship">
+      <Column Name="AreaID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="RoleID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="oxite_Role_oxite_AreaRoleRelationship" Member="oxite_Role" ThisKey="RoleID" OtherKey="RoleID" Type="oxite_Role" IsForeignKey="true" />
+      <Association Name="oxite_Area_oxite_AreaRoleRelationship" Member="oxite_Area" ThisKey="AreaID" OtherKey="AreaID" Type="oxite_Area" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.oxite_PostAreaRelationship" Member="oxite_PostAreaRelationships" AccessModifier="Internal">
+    <Type Name="oxite_PostAreaRelationship">
+      <Column Name="PostID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="AreaID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="oxite_Area_oxite_PostAreaRelationship" Member="oxite_Area" ThisKey="AreaID" OtherKey="AreaID" Type="oxite_Area" IsForeignKey="true" />
+      <Association Name="oxite_Post_oxite_PostAreaRelationship" Member="oxite_Post" ThisKey="PostID" OtherKey="PostID" Type="oxite_Post" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.oxite_PostTagRelationship" Member="oxite_PostTagRelationships" AccessModifier="Internal">
+    <Type Name="oxite_PostTagRelationship">
+      <Column Name="PostID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TagID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TagDisplayName" Type="System.String" DbType="nvarchar(MAX)" CanBeNull="true" />
+      <Association Name="oxite_Tag_oxite_PostTagRelationship" Member="oxite_Tag" ThisKey="TagID" OtherKey="TagID" Type="oxite_Tag" IsForeignKey="true" />
+      <Association Name="oxite_Post_oxite_PostTagRelationship" Member="oxite_Post" ThisKey="PostID" OtherKey="PostID" Type="oxite_Post" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.oxite_Role" Member="oxite_Roles" AccessModifier="Internal">
+    <Type Name="oxite_Role">
+      <Column Name="ParentRoleID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="RoleID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="RoleName" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Association Name="oxite_Role_oxite_UserRoleRelationship" Member="oxite_UserRoleRelationships" ThisKey="RoleID" OtherKey="RoleID" Type="oxite_UserRoleRelationship" />
+      <Association Name="oxite_Role_oxite_AreaRoleRelationship" Member="oxite_AreaRoleRelationships" ThisKey="RoleID" OtherKey="RoleID" Type="oxite_AreaRoleRelationship" />
+      <Association Name="oxite_Role_oxite_Role" Member="oxite_Roles" ThisKey="RoleID" OtherKey="ParentRoleID" Type="oxite_Role" />
+      <Association Name="oxite_Role_oxite_Role" Member="oxite_Role1" ThisKey="ParentRoleID" OtherKey="RoleID" Type="oxite_Role" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.oxite_SubscriptionAnonymous" Member="oxite_SubscriptionAnonymous" AccessModifier="Internal">
+    <Type Name="oxite_SubscriptionAnonymous">
+      <Column Name="SubscriptionID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Association Name="oxite_Subscription_oxite_SubscriptionAnonymous" Member="oxite_Subscription" ThisKey="SubscriptionID" OtherKey="SubscriptionID" Type="oxite_Subscription" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.oxite_UserFileResourceRelationship" Member="oxite_UserFileResourceRelationships" AccessModifier="Internal">
+    <Type Name="oxite_UserFileResourceRelationship">
+      <Column Name="UserID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FileResourceID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="oxite_FileResource_oxite_UserFileResourceRelationship" Member="oxite_FileResource" ThisKey="FileResourceID" OtherKey="FileResourceID" Type="oxite_FileResource" IsForeignKey="true" />
+      <Association Name="oxite_User_oxite_UserFileResourceRelationship" Member="oxite_User" ThisKey="UserID" OtherKey="UserID" Type="oxite_User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.oxite_FileResource" Member="oxite_FileResources" AccessModifier="Internal">
+    <Type Name="oxite_FileResource">
+      <Column Name="SiteID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="FileResourceID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FileResourceName" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="CreatorUserID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Data" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ContentType" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="Path" Type="System.String" DbType="NVarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="State" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="oxite_FileResource_oxite_UserFileResourceRelationship" Member="oxite_UserFileResourceRelationships" ThisKey="FileResourceID" OtherKey="FileResourceID" Type="oxite_UserFileResourceRelationship" />
+      <Association Name="oxite_User_oxite_FileResource" Member="oxite_User" ThisKey="CreatorUserID" OtherKey="UserID" Type="oxite_User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.oxite_StringResource" Member="oxite_StringResources" AccessModifier="Internal">
+    <Type Name="oxite_StringResource">
+      <Column Name="StringResourceKey" Type="System.String" DbType="NVarChar(256) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Language" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+      <Column Name="Version" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="StringResourceValue" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="CreatorUserID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="oxite_StringResource_oxite_StringResourceVersion" Member="oxite_StringResourceVersions" ThisKey="StringResourceKey" OtherKey="StringResourceKey" Type="oxite_StringResourceVersion" />
+    </Type>
+  </Table>
+  <Table Name="dbo.oxite_StringResourceVersion" Member="oxite_StringResourceVersions" AccessModifier="Internal">
+    <Type Name="oxite_StringResourceVersion">
+      <Column Name="StringResourceKey" Type="System.String" DbType="NVarChar(256) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Language" Type="System.String" DbType="VarChar(8) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Version" Type="System.Int16" DbType="SmallInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="StringResourceValue" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="CreatorUserID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="State" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Association Name="oxite_StringResource_oxite_StringResourceVersion" Member="oxite_StringResource" ThisKey="StringResourceKey" OtherKey="StringResourceKey" Type="oxite_StringResource" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.oxite_Trackback" Member="oxite_Trackbacks" AccessModifier="Internal">
+    <Type Name="oxite_Trackback">
+      <Column Name="PostID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="TrackbackID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Url" Type="System.String" DbType="NVarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Body" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="Source" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="BlogName" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="IsTargetInSource" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="oxite_Post_oxite_Trackback" Member="oxite_Post" ThisKey="PostID" OtherKey="PostID" Type="oxite_Post" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.oxite_Subscription" Member="oxite_Subscriptions" AccessModifier="Internal">
+    <Type Name="oxite_Subscription">
+      <Column Name="SubscriptionID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PostID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Association Name="oxite_Subscription_oxite_SubscriptionAnonymous" Member="oxite_SubscriptionAnonymous" ThisKey="SubscriptionID" OtherKey="SubscriptionID" Type="oxite_SubscriptionAnonymous" Cardinality="One" />
+      <Association Name="oxite_User_oxite_Subscription" Member="oxite_User" ThisKey="UserID" OtherKey="UserID" Type="oxite_User" IsForeignKey="true" />
+      <Association Name="oxite_Post_oxite_Subscription" Member="oxite_Post" ThisKey="PostID" OtherKey="PostID" Type="oxite_Post" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.oxite_Tag" Member="oxite_Tags" AccessModifier="Internal">
+    <Type Name="oxite_Tag">
+      <Column Name="ParentTagID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="TagID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TagName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="oxite_Tag_oxite_PostTagRelationship" Member="oxite_PostTagRelationships" ThisKey="TagID" OtherKey="TagID" Type="oxite_PostTagRelationship" />
+      <Association Name="oxite_Tag_oxite_Tag" Member="oxite_Tags" ThisKey="TagID" OtherKey="ParentTagID" Type="oxite_Tag" />
+      <Association Name="oxite_Tag_oxite_Tag" Member="oxite_Tag1" ThisKey="ParentTagID" OtherKey="TagID" Type="oxite_Tag" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.oxite_Language" Member="oxite_Languages" AccessModifier="Internal">
+    <Type Name="oxite_Language">
+      <Column Name="LanguageID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="LanguageName" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+      <Column Name="LanguageDisplayName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="oxite_Language_oxite_UserLanguage" Member="oxite_UserLanguages" ThisKey="LanguageID" OtherKey="LanguageID" Type="oxite_UserLanguage" />
+      <Association Name="oxite_Language_oxite_User" Member="oxite_Users" ThisKey="LanguageID" OtherKey="DefaultLanguageID" Type="oxite_User" />
+      <Association Name="oxite_Language_oxite_Comment" Member="oxite_Comments" ThisKey="LanguageID" OtherKey="LanguageID" Type="oxite_Comment" />
+    </Type>
+  </Table>
+  <Table Name="dbo.oxite_UserLanguage" Member="oxite_UserLanguages" AccessModifier="Internal">
+    <Type Name="oxite_UserLanguage">
+      <Column Name="UserID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="LanguageID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="oxite_Language_oxite_UserLanguage" Member="oxite_Language" ThisKey="LanguageID" OtherKey="LanguageID" Type="oxite_Language" IsForeignKey="true" />
+      <Association Name="oxite_User_oxite_UserLanguage" Member="oxite_User" ThisKey="UserID" OtherKey="UserID" Type="oxite_User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.oxite_CommentAnonymous" Member="oxite_CommentAnonymous" AccessModifier="Internal">
+    <Type Name="oxite_CommentAnonymous">
+      <Column Name="CommentID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="HashedEmail" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Url" Type="System.String" DbType="NVarChar(300) NOT NULL" CanBeNull="false" />
+      <Association Name="oxite_Comment_oxite_CommentAnonymous" Member="oxite_Comment" ThisKey="CommentID" OtherKey="CommentID" Type="oxite_Comment" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.oxite_User" Member="oxite_Users" AccessModifier="Internal">
+    <Type Name="oxite_User">
+      <Column Name="UserID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="DisplayName" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="HashedEmail" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="PasswordSalt" Type="System.String" DbType="NVarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="DefaultLanguageID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Association Name="oxite_User_oxite_UserRoleRelationship" Member="oxite_UserRoleRelationships" ThisKey="UserID" OtherKey="UserID" Type="oxite_UserRoleRelationship" />
+      <Association Name="oxite_User_oxite_UserFileResourceRelationship" Member="oxite_UserFileResourceRelationships" ThisKey="UserID" OtherKey="UserID" Type="oxite_UserFileResourceRelationship" />
+      <Association Name="oxite_User_oxite_FileResource" Member="oxite_FileResources" ThisKey="UserID" OtherKey="CreatorUserID" Type="oxite_FileResource" />
+      <Association Name="oxite_User_oxite_Subscription" Member="oxite_Subscriptions" ThisKey="UserID" OtherKey="UserID" Type="oxite_Subscription" />
+      <Association Name="oxite_User_oxite_UserLanguage" Member="oxite_UserLanguages" ThisKey="UserID" OtherKey="UserID" Type="oxite_UserLanguage" />
+      <Association Name="oxite_User_oxite_Comment" Member="oxite_Comments" ThisKey="UserID" OtherKey="CreatorUserID" Type="oxite_Comment" />
+      <Association Name="oxite_User_oxite_Post" Member="oxite_Posts" ThisKey="UserID" OtherKey="CreatorUserID" Type="oxite_Post" />
+      <Association Name="oxite_Language_oxite_User" Member="oxite_Language" ThisKey="DefaultLanguageID" OtherKey="LanguageID" Type="oxite_Language" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.oxite_PostRelationship" Member="oxite_PostRelationships" AccessModifier="Internal">
+    <Type Name="oxite_PostRelationship">
+      <Column Name="SiteID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ParentPostID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PostID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="oxite_Site_oxite_PostRelationship" Member="oxite_Site" ThisKey="SiteID" OtherKey="SiteID" Type="oxite_Site" IsForeignKey="true" />
+      <Association Name="oxite_Post_oxite_PostRelationship" Member="oxite_Post" ThisKey="PostID" OtherKey="PostID" Type="oxite_Post" IsForeignKey="true" />
+      <Association Name="oxite_Post_oxite_PostRelationship1" Member="oxite_Post1" ThisKey="ParentPostID" OtherKey="PostID" Type="oxite_Post" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.oxite_SiteRedirect" Member="oxite_SiteRedirects">
+    <Type Name="oxite_SiteRedirect">
+      <Column Name="SiteID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SiteRedirect" Type="System.String" DbType="VarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="oxite_Site_oxite_SiteRedirect" Member="oxite_Site" ThisKey="SiteID" OtherKey="SiteID" Type="oxite_Site" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.oxite_PluginSetting" Member="oxite_PluginSettings">
+    <Type Name="oxite_PluginSetting">
+      <Column Name="SiteID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PluginID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PluginSettingName" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PluginSettingValue" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Association Name="oxite_Plugin_oxite_PluginSetting" Member="oxite_Plugin" ThisKey="SiteID,PluginID" OtherKey="SiteID,PluginID" Type="oxite_Plugin" IsForeignKey="true" />
+      <Association Name="oxite_Site_oxite_PluginSetting" Member="oxite_Site" ThisKey="SiteID" OtherKey="SiteID" Type="oxite_Site" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.oxite_Plugin" Member="oxite_Plugins">
+    <Type Name="oxite_Plugin">
+      <Column Name="SiteID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PluginID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PluginName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PluginCategory" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Enabled" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="oxite_Plugin_oxite_PluginSetting" Member="oxite_PluginSettings" ThisKey="SiteID,PluginID" OtherKey="SiteID,PluginID" Type="oxite_PluginSetting" />
+      <Association Name="oxite_Site_oxite_Plugin" Member="oxite_Site" ThisKey="SiteID" OtherKey="SiteID" Type="oxite_Site" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.oxite_Comment" Member="oxite_Comments">
+    <Type Name="oxite_Comment">
+      <Column Name="PostID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="CommentID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CreatorUserID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="LanguageID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="CreatorIP" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="UserAgent" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Body" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="State" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="oxite_Comment_oxite_CommentAnonymous" Member="oxite_CommentAnonymous" ThisKey="CommentID" OtherKey="CommentID" Type="oxite_CommentAnonymous" Cardinality="One" />
+      <Association Name="oxite_Language_oxite_Comment" Member="oxite_Language" ThisKey="LanguageID" OtherKey="LanguageID" Type="oxite_Language" IsForeignKey="true" />
+      <Association Name="oxite_User_oxite_Comment" Member="oxite_User" ThisKey="CreatorUserID" OtherKey="UserID" Type="oxite_User" IsForeignKey="true" />
+      <Association Name="oxite_Post_oxite_Comment" Member="oxite_Post" ThisKey="PostID" OtherKey="PostID" Type="oxite_Post" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.oxite_MessageOutbound" Member="oxite_MessageOutbounds">
+    <Type Name="oxite_MessageOutbound">
+      <Column Name="MessageOutboundID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MessageTo" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="MessageSubject" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="MessageBody" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="IsSending" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="RemainingRetryCount" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="SentDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="LastAttemptDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.oxite_Site" Member="oxite_Sites">
+    <Type Name="oxite_Site">
+      <Column Name="SiteID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SiteHost" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="SiteName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SiteDisplayName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SiteDescription" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="LanguageDefault" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+      <Column Name="TimeZoneOffset" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="PageTitleSeparator" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="FavIconUrl" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ScriptsPath" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CssPath" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CommentStateDefault" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="IncludeOpenSearch" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="AuthorAutoSubscribe" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PostEditTimeout" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="GravatarDefault" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="SkinDefault" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ServiceRetryCountDefault" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="HasMultipleAreas" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="RouteUrlPrefix" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="CommentingDisabled" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="oxite_Site_oxite_PostRelationship" Member="oxite_PostRelationships" ThisKey="SiteID" OtherKey="SiteID" Type="oxite_PostRelationship" />
+      <Association Name="oxite_Site_oxite_SiteRedirect" Member="oxite_SiteRedirects" ThisKey="SiteID" OtherKey="SiteID" Type="oxite_SiteRedirect" />
+      <Association Name="oxite_Site_oxite_PluginSetting" Member="oxite_PluginSettings" ThisKey="SiteID" OtherKey="SiteID" Type="oxite_PluginSetting" />
+      <Association Name="oxite_Site_oxite_Plugin" Member="oxite_Plugins" ThisKey="SiteID" OtherKey="SiteID" Type="oxite_Plugin" />
+      <Association Name="oxite_Site_oxite_Area" Member="oxite_Areas" ThisKey="SiteID" OtherKey="SiteID" Type="oxite_Area" />
+    </Type>
+  </Table>
+  <Table Name="dbo.oxite_Area" Member="oxite_Areas">
+    <Type Name="oxite_Area">
+      <Column Name="SiteID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="AreaID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="AreaName" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="DisplayName" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="CommentingDisabled" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="oxite_Area_oxite_AreaRoleRelationship" Member="oxite_AreaRoleRelationships" ThisKey="AreaID" OtherKey="AreaID" Type="oxite_AreaRoleRelationship" />
+      <Association Name="oxite_Area_oxite_PostAreaRelationship" Member="oxite_PostAreaRelationships" ThisKey="AreaID" OtherKey="AreaID" Type="oxite_PostAreaRelationship" />
+      <Association Name="oxite_Site_oxite_Area" Member="oxite_Site" ThisKey="SiteID" OtherKey="SiteID" Type="oxite_Site" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.oxite_Post" Member="oxite_Posts">
+    <Type Name="oxite_Post">
+      <Column Name="PostID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CreatorUserID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="Body" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="BodyShort" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="State" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="Slug" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="CommentingDisabled" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="PublishedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="SearchBody" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Association Name="oxite_Post_oxite_PostAreaRelationship" Member="oxite_PostAreaRelationships" ThisKey="PostID" OtherKey="PostID" Type="oxite_PostAreaRelationship" />
+      <Association Name="oxite_Post_oxite_PostTagRelationship" Member="oxite_PostTagRelationships" ThisKey="PostID" OtherKey="PostID" Type="oxite_PostTagRelationship" />
+      <Association Name="oxite_Post_oxite_Trackback" Member="oxite_Trackbacks" ThisKey="PostID" OtherKey="PostID" Type="oxite_Trackback" />
+      <Association Name="oxite_Post_oxite_Subscription" Member="oxite_Subscriptions" ThisKey="PostID" OtherKey="PostID" Type="oxite_Subscription" />
+      <Association Name="oxite_Post_oxite_PostRelationship" Member="oxite_PostRelationships" ThisKey="PostID" OtherKey="PostID" Type="oxite_PostRelationship" />
+      <Association Name="oxite_Post_oxite_PostRelationship1" Member="oxite_PostRelationships1" ThisKey="PostID" OtherKey="ParentPostID" Type="oxite_PostRelationship" />
+      <Association Name="oxite_Post_oxite_Comment" Member="oxite_Comments" ThisKey="PostID" OtherKey="PostID" Type="oxite_Comment" />
+      <Association Name="oxite_User_oxite_Post" Member="oxite_User" ThisKey="CreatorUserID" OtherKey="UserID" Type="oxite_User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.oxite_TrackbackOutbound" Member="oxite_TrackbackOutbounds">
+    <Type Name="oxite_TrackbackOutbound">
+      <Column Name="TrackbackOutboundID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TargetUrl" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="PostID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="PostTitle" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="PostAreaTitle" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="PostBody" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="PostUrl" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="IsSending" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="RemainingRetryCount" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="SentDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="LastAttemptDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
