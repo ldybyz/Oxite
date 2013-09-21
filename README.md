@@ -1,4 +1,4 @@
 Oxite
 =====
 
-Oxite Microsoft opensource
+Oxite Microsoft opensource CMS
